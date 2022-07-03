@@ -8,12 +8,11 @@ public class Main
     {
         Scanner input = new Scanner(System.in);
         boolean replay = false;
-        System.out.println("  H A N G M A N  ");
 
         do
         {
             Hangman play = new Hangman();
-            replay = play.Game();
+            replay = play.game();
         } while(replay);
     }
 }

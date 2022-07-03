@@ -2,7 +2,8 @@ package program;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HangmanTest
@@ -12,6 +13,9 @@ class HangmanTest
     @BeforeEach
     void constructTest()
     {
+        InputStream sysInBackup = System.in;
+        ByteArrayInputStream in = new ByteArrayInputStream("Tester".getBytes());
+        System.setIn(in);
         test = new Hangman();
     }
 

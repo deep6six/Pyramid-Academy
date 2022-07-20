@@ -1,6 +1,6 @@
 package org.genspark;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App 
@@ -10,9 +10,10 @@ public class App
         //BeanFactory
 
         //Application Context
-        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-        Vehicle obj = (Vehicle)context.getBean("Vehicle");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+        Vehicle obj = (Vehicle)context.getBean("car");
         obj.drive();
+        context.close();
 
     }
 }

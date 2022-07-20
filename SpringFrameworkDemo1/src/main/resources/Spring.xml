@@ -5,10 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
-    <bean id="Vehicle" class="org.genspark.Car">
-        <constructor-arg index="0" ref="Tire"/>
+    <context:component-scan base-package="org.genspark"/>
+
+<!--    <bean id="Vehicle" class="org.genspark.Car" init-method="init" destroy-method="destroy">-->
+<!--        <constructor-arg index="0" ref="Tire"/>-->
 <!--        <property name="t" ref="Tire"/>-->
-    </bean>
+<!--    </bean>-->
+
     <bean id="Tire" class="org.genspark.Tire">
         <constructor-arg index="0" value="CEAT"/>
         <constructor-arg index="1" type="int" value="19"/>

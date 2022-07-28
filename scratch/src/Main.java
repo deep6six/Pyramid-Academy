@@ -1,23 +1,18 @@
+import java.util.Arrays;
+
 public class Main
 {
     public static void main(String[] args)
     {
-        String s = "banana";
-        System.out.println(s);
-        System.out.println(iterativeRvs(s));
-        System.out.println(functionalRvs("abcdefg"));
+        int[] nums = {2,5,6,4};
+        Arrays.stream(r(nums)).forEach(i->System.out.println(i));
     }
-    static String iterativeRvs(String str)
+    static int[] r(int[] nums)
     {
-        String rvs = "";
-        for(int i = str.length()-1; i>=0; i--)
-        {
-            rvs += str.charAt(i);
-        }
-        return rvs;
-    }
-    static String functionalRvs(String str)
-    {
-        return str.chars().mapToObj(c->(char)c).reduce("",(s,c)->(c+s),(s1,s2)->s2+s1);
+        return Arrays.stream(nums).map(n->{
+            int[] product = new int[nums.length];
+            for(int i=0;i<nums.length;i++){ if(nums[i] != n) { product[i] = nums[i]; } }
+            return Arrays.stream(product).filter(i->i != 0).reduce(1,(a,b)->a*b);
+        }).toArray();
     }
 }

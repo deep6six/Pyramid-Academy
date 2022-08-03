@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService
     @Override
     public String deleteUserById(int userID)
     {
-        this.deleteUserById(userID);
+        this.userDAO.deleteById(userID);
         return "Deleted Successfully";
     }
 }

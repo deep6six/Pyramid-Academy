@@ -44,7 +44,7 @@ public class UserController
         return this.userService.updateUser(user);
     }
 
-    @DeleteMapping("/courses/{courseID}")
-    public String deleteUser(@PathVariable String userID) { return this.userService.deleteUserById(Integer.parseInt(userID)); }
+    @DeleteMapping("/users/{userID}")
+    public String deleteUserById(@PathVariable String userID) { return this.userService.deleteUserById(Integer.parseInt(userID)); }
 
 }

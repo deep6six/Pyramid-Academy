@@ -1,0 +1,111 @@
+/* header styles */
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    sans-serif;
+}
+
+.header {
+  display: block;
+  font-size: 30px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.cartItem {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+
+.cartItemImg {
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+  width: 50px;
+}
+
+.cartItemDetail {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+/* Home Page */
+
+.home {
+  display: flex;
+}
+
+.filters {
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  margin: 10px;
+  padding: 20px;
+  width: 20%;
+}
+
+.filters > span {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  width: 78%;
+}
+
+.products {
+  margin: 10px;
+  width: 30%;
+}
+
+.summary {
+  width: 30%;
+}
+
+.card-buttons-container button {
+  margin: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 771px) {
+  .filters {
+    margin: 5px;
+    padding: 10px;
+    width: 40%;
+  }
+
+  .filters > span {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 18px !important;
+  }
+
+  .productContainer {
+    padding: 0;
+    width: 58%;
+  }
+
+  .search {
+    display: none !important;
+  }
+
+  .products {
+    width: 100%;
+  }
+}

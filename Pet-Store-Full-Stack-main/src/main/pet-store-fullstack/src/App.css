@@ -1,0 +1,28 @@
+.App {
+
+  text-align: center;
+  min-height: 800px;
+  background-color: rgb(10, 145, 45);
+}
+
+.App-header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+img {
+
+  border-radius: 25px;
+}
+
+p {
+
+  color: white;
+  font-size: calc(5px + 2vmin);
+}
+
